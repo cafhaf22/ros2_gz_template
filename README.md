@@ -1,6 +1,10 @@
 # ros_gz_project_template
 A template project integrating ROS 2 and Gazebo simulator.
 
+##*Note: This branch template was modified to work with ignition gazebo Fortress*
+prior the use of the `gz` namespaces, this branch uses `ign` namespaces
+
+
 ## Included packages
 
 * `ros_gz_example_description` - holds the sdf description of the simulated system and any other assets.
