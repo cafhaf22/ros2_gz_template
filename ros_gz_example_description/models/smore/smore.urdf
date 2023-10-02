@@ -1,0 +1,140 @@
+<robot name="smore" version="1.0">
+  <joint name="back_wheel_link_joint" type="continuous">
+    <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.10390 0.05900 0.01019"/>
+    <parent link="chasis_link"/>
+    <child link="back_link"/>
+    <axis xyz="1.00000 0.00000 0.00000"/>
+  </joint>
+  <joint name="front_wheel_link_joint" type="continuous">
+    <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
+    <origin rpy="1.57080 0.00000 0.00000" xyz="0.00000 -0.10251 -0.00000"/>
+    <parent link="chasis_link"/>
+    <child link="front_wheel_link"/>
+    <axis xyz="0.00000 0.00000 1.00000"/>
+  </joint>
+  <joint name="left_wheel_link_joint" type="continuous">
+    <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
+    <origin rpy="1.57080 1.41363 1.57080" xyz="0.11200 0.02822 -0.00000"/>
+    <parent link="chasis_link"/>
+    <child link="left_wheel_link"/>
+    <axis xyz="0.00000 0.00000 1.00000"/>
+  </joint>
+  <joint name="right_wheel_link_joint" type="continuous">
+    <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
+    <origin rpy="0.00000 1.57080 0.00000" xyz="-0.11200 0.02822 0.00000"/>
+    <parent link="chasis_link"/>
+    <child link="right_wheel_link"/>
+    <axis xyz="0.00000 0.00000 1.00000"/>
+  </joint>
+  <link name="back_link">
+    <collision name="back_collision">
+      <origin rpy="-0.00000 0.00000 -0.00000" xyz="0.00028 -0.00040 -0.00019"/>
+      <geometry>
+        <mesh filename="/home/carlos/smore_ws/src/smore_project/ros_gz_example_description/models/smore/meshes/dae/Cube.004.dae" scale="0.00300 0.08000 0.07000"/>
+      </geometry>
+    </collision>
+    <visual name="back">
+      <origin rpy="-0.00000 0.00000 0.00000" xyz="0.00000 0.00000 -0.00000"/>
+      <material name="Material.004"/>
+      <geometry>
+        <mesh filename="/home/carlos/smore_ws/src/smore_project/ros_gz_example_description/models/smore/meshes/dae/Cube.004.dae" scale="0.00300 0.08000 0.07000"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="chasis_link">
+    <collision name="chasis_collision">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <geometry>
+        <mesh filename="/home/carlos/smore_ws/src/smore_project/ros_gz_example_description/models/smore/meshes/dae/Cube.dae" scale="0.10000 0.10000 0.10000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00100" ixy="0.00000" ixz="0.00000" iyy="0.00100" iyz="0.00000" izz="0.00100"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <mass value="0.01000"/>
+    </inertial>
+    <visual name="chasis">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <material name="Material"/>
+      <geometry>
+        <mesh filename="/home/carlos/smore_ws/src/smore_project/ros_gz_example_description/models/smore/meshes/dae/Cube.dae" scale="0.10000 0.10000 0.10000"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="front_wheel_link">
+    <collision name="front_wheel_collision">
+      <origin rpy="0.00000 -0.00000 -0.14096" xyz="0.00000 0.00000 -0.00000"/>
+      <geometry>
+        <cylinder radius="0.11000" length="0.00500"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00003" ixy="-0.00000" ixz="0.00000" iyy="0.00006" iyz="-0.00000" izz="0.00003"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 -0.00000"/>
+      <mass value="0.01000"/>
+    </inertial>
+    <visual name="front_wheel">
+      <origin rpy="0.00000 -0.00000 -0.14096" xyz="-0.00000 -0.00000 -0.00000"/>
+      <material name="Material.005"/>
+      <geometry>
+        <cylinder radius="0.11000" length="0.00500"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="left_wheel_link">
+    <collision name="left_wheel_collision">
+      <origin rpy="-0.00000 -0.00000 -0.15717" xyz="-0.00000 -0.00000 0.00000"/>
+      <geometry>
+        <cylinder radius="0.12008" length="0.00500"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00007" ixy="-0.00000" ixz="-0.00000" iyy="0.00004" iyz="0.00000" izz="0.00004"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 -0.00000"/>
+      <mass value="0.01000"/>
+    </inertial>
+    <visual name="left_wheel">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 -0.00000"/>
+      <material name="Material.003"/>
+      <geometry>
+        <cylinder radius="0.12000" length="0.00500"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="right_wheel_link">
+    <collision name="right_wheel_collision">
+      <origin rpy="-0.00000 -0.00000 0.00000" xyz="0.00000 0.00000 -0.00000"/>
+      <geometry>
+        <cylinder radius="0.12084" length="0.00504"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <inertia ixx="0.00007" ixy="-0.00000" ixz="0.00000" iyy="0.00004" iyz="-0.00000" izz="0.00004"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 -0.00000"/>
+      <mass value="0.01000"/>
+    </inertial>
+    <visual name="right_wheel">
+      <origin rpy="-0.00000 -0.00000 0.00000" xyz="0.00000 0.00000 -0.00000"/>
+      <material name="Material.001"/>
+      <geometry>
+        <cylinder radius="0.12000" length="0.00500"/>
+      </geometry>
+    </visual>
+  </link>
+  <material name="Material">
+    <color rgba="0.80000 0.80000 0.80000 1.00000"/>
+  </material>
+  <material name="Material.001">
+    <color rgba="0.80000 0.00000 0.00000 1.00000"/>
+  </material>
+  <material name="Material.003">
+    <color rgba="0.00000 0.00000 1.00000 1.00000"/>
+  </material>
+  <material name="Material.004">
+    <color rgba="0.05882 0.80000 0.27843 1.00000"/>
+  </material>
+  <material name="Material.005">
+    <color rgba="0.83137 1.00000 0.40000 1.00000"/>
+  </material>
+</robot>
