@@ -36,6 +36,18 @@ def generate_launch_description():
         ])}.items(),
     )
 
+    # Takes the description and joint angles as inputs and publishes the 3D poses of the robot links
+    robot_state_publisher = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        name='robot_state_publisher',
+        output='both',
+        parameters=[
+            {'use_sim_time': True},
+            {'robot_description': robot_desc},
+        ]
+    )
+
     # RViz stuff
     # RViz stuff
 
@@ -54,7 +66,7 @@ def generate_launch_description():
         gz_sim,
         # DeclareLaunchArgument('rviz', default_value='true',
         #                       description='Open RViz.'),
-        bridge
-        # robot_state_publisher,
+        bridge,
+        robot_state_publisher
         # rviz
     ])
