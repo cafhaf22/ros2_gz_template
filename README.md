@@ -74,4 +74,18 @@ Or start by creating a workspace and cloning the template repository:
     ros2 launch ros_gz_example_bringup diff_drive.launch.py
     ```
 
+
+## Useful commands
+
+Move the smore robot
+
+```bash
+ros2 topic pub /smore/cmd_vel geometry_msgs/msg/Twist "linear: {x: 0.5}"
+```
+
+Echo the odometry of the robot
+```bash
+ros2 topic echo /smore/odometry
+```
+
 For a more detailed guide on using this template see [documentation](https://gazebosim.org/docs/latest/ros_gz_project_template_guide).

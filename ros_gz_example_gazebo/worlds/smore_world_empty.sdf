@@ -90,9 +90,10 @@
             <plugin
               filename="ignition-gazebo-odometry-publisher-system"
               name="ignition::gazebo::systems::OdometryPublisher">
-              <odom_frame>diff_drive/odom</odom_frame>
-              <robot_base_frame>diff_drive</robot_base_frame>
+              <odom_frame>smore/odom</odom_frame>
+              <robot_base_frame>smore</robot_base_frame>
             </plugin>
         </model>
+        
     </world>
 </sdf>
