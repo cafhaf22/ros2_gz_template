@@ -1,22 +1,19 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>ros_gz_example_application</name>
+  <name>custom_interfaces</name>
   <version>0.0.0</version>
-  <description>Application-specific implementations for the ros_gz_project example</description>
-  <maintainer email="carlos.afv95@gmail.com">Carlos Fierro</maintainer>
-  <license>Apache 2.0</license>
-  <author>Carlos Fierrp</author>
+  <description>TODO: Package description</description>
+  <maintainer email="carlos.afv95@gmail.com">carlos</maintainer>
+  <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <depend>rclcpp</depend>
-  <!--depend>std_msgs</depend-->
   <depend>geometry_msgs</depend>
-  <depend>nav_msgs</depend>
-  <depend>tf2</depend>
 
   <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
 
   <export>
     <build_type>ament_cmake</build_type>

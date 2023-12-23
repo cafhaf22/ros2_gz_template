@@ -1,18 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.8">
-<model name="smore" canonical_link= "dummy_link">
-
-  <!-- Dummy link -->
-  <link name= "dummy_link">
-    <pose>0.00000 0.00000 0.00000 0.00000 0.00000 1.5708</pose>
-  </link>
-
-  <!-- dummy joint-->
-  <joint name = "dummy_joint" type = "fixed">
-    <parent>dummy_link</parent>
-    <child>chasis_link</child>
-  </joint>
-  
+<model name="smore" canonical_link="chasis_link">
 
   <!-- Back joint-->
   <joint name="back_wheel_link_joint" type="revolute">
@@ -76,12 +64,9 @@
   </joint>
   <!-- Right wheel joint-->
 
-  
-
-
   <!-- Chasis link -->
   <link name="chasis_link">
-    <pose>0.00000 0.00000 0.00000 0.00000 0.00000 1.5708</pose>
+    <pose>0.00000 0.00000 0.00000 0.00000 0.00000 0.00000</pose>
     <collision name="chasis_collision">
       <!--pose relative_to="chasis_link">0.00000 0.00000 0.00000 0.00000 0.00000 0.00000</pose-->
       <geometry>
